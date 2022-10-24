@@ -40,13 +40,13 @@ describe("Animal", function () {
     });
 
     it("Do activity : walk", async () => {
-      await animal.doActivity(1); // nothing
+      await animal.doActivity(1); // walk
       const energy = await getEnergy();
       await expect(energy.toString()).to.equal(parseEther("205"));
     });
 
-    it("Do activity : nothing", async () => {
-      await animal.doActivity(2); // nothing
+    it("Do activity : run", async () => {
+      await animal.doActivity(2); // run
       const energy = await getEnergy();
       await expect(energy.toString()).to.equal(parseEther("195"));
     });
